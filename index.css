@@ -2,7 +2,6 @@
    v2.0 | 20110126
    License: none (public domain)
 */
-
 html,
 body,
 div,
@@ -88,10 +87,14 @@ video {
   padding: 0;
   border: 0;
   font-size: 100%;
+  color: #444444;
   font: inherit;
   vertical-align: baseline;
   text-decoration: none;
-  font-family: "SUIT-Regular";
+  font-family: "NanumSquareNeo";
+}
+body {
+  overflow-x: hidden;
 }
 /* HTML5 display-role reset for older browsers */
 article,
@@ -130,132 +133,18 @@ table {
   border-spacing: 0;
 }
 
-@font-face {
-  font-family: "SUIT-Regular";
-  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_suit@1.0/SUIT-Regular.woff2")
-    format("woff2");
-  font-weight: normal;
-  font-style: normal;
+body::-webkit-scrollbar {
+  width: 8px;
 }
 
-/* header */
-header {
-  position: fixed;
-  width: 100%;
-  top: 0;
-  left: 0;
-  z-index: 9999;
+body::-webkit-scrollbar-thumb {
+  height: 10%;
+  background: #96c5d1b0;
+  border-radius: 10px;
 }
 
-.innerHeader {
-  width: 80%;
-  margin: 0 auto;
-  box-sizing: border-box;
-  height: 100px;
-  text-align: center;
-  z-index: 9999;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.headerLine {
-  position: absolute;
-  left: 0;
-  top: 0;
-  width: 100%;
-}
-
-.innerHeader .gnb {
-  display: flex;
-  justify-content: center;
-}
-
-.innerHeader .gnb .mainMenu {
-  width: 180px;
-  cursor: pointer;
-  color: #444444;
-  position: relative;
-  font-size: 18px;
-}
-
-.innerHeader .gnb .mainMenu:hover {
-  font-weight: 800;
-}
-
-.sideMenu .sideMenuAll {
-  display: none;
-}
-
-.innerHeader .gnb > li {
-  padding: 42px 0;
-}
-
-.innerHeader .gnb > li > ul {
-  display: none;
-}
-
-.innerHeader .gnb > li:hover > ul {
-  display: block;
-}
-
-.innerHeader .gnb > li > ul {
-  position: absolute;
-  width: 100%;
-  top: 100px;
-  background-color: #ffffff;
-}
-
-.subMenu {
-  line-height: 55px;
-  color: #444444;
-  font-weight: 500;
-}
-
-.subMenu:hover {
-  color: #00bdff;
-  font-weight: 800;
-}
-
-.sideMenu > img {
-  cursor: pointer;
-}
-
-.sideMenuAll {
-  width: 100%;
-  background-color: #ffffff;
-  position: absolute;
-  left: 0;
-  top: 100px;
-  border-top: 1px solid #afafaf59;
-}
-
-.sideMenuAll > div {
-  width: 50%;
-  margin: 0 auto;
-  padding: 30px 0;
-}
-
-.sideMenuAll > div > ul {
-  display: flex;
-  justify-content: space-between;
-  color: #00bdff;
-  font-size: 18px;
-  font-weight: 600;
-}
-
-.sideMainMenu {
-  margin: 20px auto 0;
-}
-
-.sideMainMenu li a {
-  color: #444444;
-  line-height: 40px;
-  font-weight: 500;
-}
-
-.sideMainMenu li a:hover {
-  font-weight: 600;
+::-webkit-scrollbar-track {
+  background: #ffffff;
 }
 
 /* banner */
@@ -263,74 +152,323 @@ header {
   z-index: 10;
   position: absolute;
   color: #444444;
-  top: 50%;
-  left: 50%;
+  top: 40%;
   width: 100%;
-  transform: translate(-50%, -50%);
   text-align: center;
-  opacity: 0;
-  animation: fadeInUp 2s forwards;
+  animation: slideInFromBottom 1s ease-out;
 }
-
-@keyframes fadeInUp {
+@keyframes slideInFromBottom {
   0% {
-    top: 60%;
+    transform: translateY(70%);
     opacity: 0;
   }
   100% {
-    top: 50%;
+    transform: translateY(0);
     opacity: 1;
   }
 }
 
 .bannerText h2 {
-  font-size: 52px;
-  margin-bottom: 100px;
+  font-size: 53px;
+  margin-bottom: 30px;
+  font-weight: 600;
 }
 
 .bannerText p {
-  font-size: 26px;
+  font-size: 24px;
+  margin-bottom: 70px;
 }
 
-.textLine {
-  display: inline-block;
-  width: 0;
-  height: 2px;
-  background-color: #ffffff;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  animation: growLine 2s forwards;
+.bannerMenu > ul {
+  width: 100%;
+  justify-content: center;
+  display: flex;
 }
 
-@keyframes growLine {
-  0% {
-    width: 0;
-  }
-  100% {
-    width: 1200px;
-  }
+.bannerMenu > ul li {
+  display: flex;
+  width: 190px;
+  height: 55px;
+  margin: 0 20px;
+  background-color: #327787;
+  font-size: 16px;
+  align-items: center;
+  justify-content: center;
+  background-image: linear-gradient(#fff, #fff), linear-gradient(#fff, #fff),
+    linear-gradient(#fff, #fff), linear-gradient(#fff, #fff),
+    linear-gradient(#327787, #327787);
+  background-repeat: no-repeat;
+  background-size: 2px 50%, 50% 2px, 2px 50%, 50% 2px,
+    calc(100% - 8px) calc(100% - 8px);
+  background-position: left bottom, left bottom, right top, right top, 4px 4px;
+}
+
+.bannerMenu > ul li:hover {
+  background-size: 2px 100%, 100% 2px, 2px 100%, 100% 2px,
+    calc(100% - 8px) calc(100% - 8px);
+  transition: background-size 0.3s ease-in-out;
+}
+
+.bannerMenu > ul li a {
+  color: #ffffff;
+  width: 100%;
+}
+
+.animate__animated.animate__fadeInUp {
+  --animate-duration: 2s;
 }
 
 .slider-container {
-  width: 100%;
-  height: 1000px;
+  background-image: url("./public/Images/background.png");
+  height: 870px;
   overflow: hidden;
   position: relative;
-  top: 80px;
+  margin-top: 100px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-position-y: 0;
 }
 
-.slider {
+.slider img {
+  width: 100%;
+  height: 870px;
+}
+.containerBox {
+  width: 1025px;
+  margin: 0 auto;
+}
+
+.introduce > img {
+  width: 100%;
+  height: 360px;
+  position: absolute;
+  z-index: -999;
+  left: 0;
+}
+
+.introduce .intTxt {
+  text-align: center;
+  word-break: keep-all;
+  margin: 0 100px;
+}
+
+.introduce .intTxt em {
+  display: inline-block;
+  color: #41bace;
+  font-size: 18px;
+  margin: 70px 0 20px;
+  font-weight: 600;
+}
+
+.introduce .intTxt p {
+  font-size: 22px;
+  color: #ffffff;
+  font-weight: 100;
+  line-height: 46px;
+}
+
+.introduce .intIcon {
   display: flex;
-  animation: slide 10s linear forwards;
+  justify-content: space-between;
+  margin: 60px 0 0;
+  flex-direction: row;
+  flex-wrap: wrap;
 }
 
-@keyframes slide {
-  0% {
-    transform: translateX(0);
+.introduce .intIcon div {
+  text-align: center;
+  width: 250px;
+}
+
+.introduce .intIcon div img {
+  filter: drop-shadow(4px 10px 8px #7c7c7c3a);
+}
+
+.introduce .intIcon div h3 {
+  font-size: 20px;
+  margin: 20px 0;
+  font-weight: 600;
+}
+
+.introduce .intIcon div p {
+  font-size: 18px;
+}
+
+@media (max-width: 1024px) {
+  .containerBox {
+    width: 961px;
   }
-  100% {
-    transform: translateX(-400px);
+  .bannerText h2 {
+    font-size: 50px;
+  }
+
+  .introduce .intIcon div {
+    text-align: center;
+    width: 240px;
+  }
+}
+
+@media (max-width: 960px) {
+  .slider-container {
+    background-image: url("./public/Images/background960.png");
+    margin-top: 80px;
+  }
+  .bannerText h2 {
+    font-size: 42px;
+    margin: 0 30px 30px;
+    line-height: 60px;
+  }
+  .bannerText p {
+    font-size: 17px;
+  }
+  .bannerMenu > ul li {
+    width: 130px;
+    height: 50px;
+    font-size: 14px;
+  }
+
+  .containerBox {
+    width: 581px;
+  }
+  .introduce > img {
+    height: 820px;
+  }
+  .introduce .intTxt {
+    margin: 0;
+  }
+  .introduce .intTxt em {
+    font-size: 14px;
+  }
+  .introduce .intTxt p {
+    font-size: 15px;
+    line-height: 30px;
+  }
+  .introduce .intIcon {
+    margin-top: 0;
+    margin-bottom: 140px;
+    justify-content: center;
+  }
+  .introduce .intIcon div {
+    width: 260px;
+    margin-top: 40px;
+  }
+  .introduce .intIcon div img {
+    width: 160px;
+  }
+  .introduce .intIcon div h3 {
+    color: #41bace;
+    font-size: 18px;
+    margin: 20px 0 15px;
+  }
+  .introduce .intIcon div p {
+    font-size: 16px;
+    color: #ffffff;
+    font-weight: 300;
+  }
+}
+
+@media (max-width: 580px) {
+  .slider-container {
+    background-image: url("./public/Images/background580.png");
+    height: 600px;
+  }
+  .bannerText {
+    top: 24%;
+  }
+  .bannerText h2 {
+    font-size: 34px;
+    margin: 0 10px 30px;
+  }
+  .bannerText p {
+    font-size: 18px;
+    margin: 0 20px 70px;
+    word-break: keep-all;
+    line-height: 26px;
+  }
+  .bannerMenu > ul li {
+    width: 100px;
+    margin: 0 10px;
+  }
+
+  .containerBox {
+    width: 376px;
+  }
+  .introduce > img {
+    height: 800px;
+  }
+  .introduce .intTxt p {
+    font-size: 16px;
+    line-height: 28px;
+  }
+  .introduce .intIcon {
+    margin-bottom: 120px;
+  }
+  .introduce .intIcon div {
+    width: 140px;
+    margin: 40px 20px 0;
+  }
+  .introduce .intIcon div img {
+    width: 130px;
+  }
+  .introduce .intIcon div h3 {
+    font-size: 16px;
+  }
+  .introduce .intIcon div p {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 375px) {
+  .slider-container {
+    background-image: url("./public/Images/background375.png");
+    height: 500px;
+  }
+  .bannerText {
+    top: 23%;
+  }
+  .bannerText h2 {
+    font-size: 26px;
+    margin: 0 10px 10px;
+    line-height: 42px;
+  }
+  .bannerText p {
+    font-size: 15px;
+    margin: 0 5px 60px;
+  }
+  .bannerMenu > ul li {
+    height: 40px;
+    font-size: 12px;
+  }
+
+  .containerBox {
+    width: 280px;
+  }
+  .introduce > img {
+    height: 680px;
+  }
+  .introduce .intTxt em {
+    margin: 50px 0 20px;
+    font-size: 11px;
+  }
+  .introduce .intTxt p {
+    font-size: 13px;
+    line-height: 24px;
+  }
+  .introduce .intIcon {
+    margin-bottom: 80px;
+  }
+  .introduce .intIcon div {
+    width: 115px;
+    margin: 40px 10px 0;
+  }
+  .introduce .intIcon div img {
+    width: 110px;
+  }
+  .introduce .intIcon div h3 {
+    font-size: 14px;
+  }
+  .introduce .intIcon div p {
+    font-size: 12px;
   }
 }

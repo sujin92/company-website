@@ -5,158 +5,174 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <link rel="stylesheet" href="index.css" />
+    <link rel="stylesheet" href="./src/Style/header.css" />
+    <link rel="stylesheet" href="./src/Style/footer.css" />
+    <link rel="stylesheet" href="./src/Style/form.css" />
+    <link rel="stylesheet" href="./src/Style/common.css" />
+    <link
+      href="https://webfontworld.github.io/NanumSquareNeo/NanumSquareNeo.css"
+      rel="stylesheet"
+    />
 
-    <script src="./src/Components/header.js"></script>
+    <script
+      src="https://kit.fontawesome.com/cad96521f3.js"
+      crossorigin="anonymous"
+    ></script>
+
+    <script src="./src/Script/header.js"></script>
+
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"
+    ></script>
+    <script type="text/javascript">
+      (function () {
+        emailjs.init("AjCgEbZ-L6jYzN1Xw");
+      })();
+    </script>
+    <script type="text/javascript">
+      window.onload = function () {
+        document
+          .getElementById("contact-form")
+          .addEventListener("submit", function (event) {
+            event.preventDefault();
+            this.contact_number.value = (Math.random() * 100000) | 0;
+            emailjs.sendForm("service_dqv0xx8", "template_305z298", this).then(
+              function () {
+                console.log("SUCCESS!");
+                alert("메일 발송에 성공했습니다.");
+              },
+              function (error) {
+                console.log("FAILED...", error);
+                alert("메일 발송에 실패했습니다.");
+              }
+            );
+          });
+      };
+    </script>
+
     <title>THE COMPANY</title>
   </head>
   <body>
-    <header>
-      <div class="innerHeader">
-        <span class="headerLine"></span>
-        <h1 class="logo">
-          <a href="/index.html"
-            ><img src="./public/Images/logoBlack.png" alt="logo"
-          /></a>
-        </h1>
-
-        <ul class="gnb">
-          <li class="mainMenu">
-            <a>About</a>
-            <ul>
-              <li><a href="#" class="subMenu">회사소개</a></li>
-              <li><a href="#" class="subMenu">연혁</a></li>
-              <li><a href="#" class="subMenu">조직도</a></li>
-            </ul>
-          </li>
-
-          <li class="mainMenu">
-            Development
-            <ul>
-              <li><a href="#" class="subMenu">AI 비전검사 </a></li>
-              <li><a href="#" class="subMenu">AI 공정인식 시스템 </a></li>
-              <li><a href="#" class="subMenu">AI 산업안전 솔루션 </a></li>
-              <li><a href="#" class="subMenu">AI 화재감지 </a></li>
-              <li><a href="#" class="subMenu">PTLS </a></li>
-              <li><a href="#" class="subMenu">Digital Twin</a></li>
-            </ul>
-          </li>
-
-          <li class="mainMenu">
-            PR Center
-            <ul>
-              <li><a href="" class="subMenu">공지사항</a></li>
-              <li><a href="" class="subMenu">보도자료</a></li>
-            </ul>
-          </li>
-
-          <li class="mainMenu">
-            Contact
-            <ul>
-              <li><a href="" class="subMenu">문의하기</a></li>
-              <li><a href="" class="subMenu">오시는 길</a></li>
-            </ul>
-          </li>
-        </ul>
-
-        <div class="sideMenu">
-          <img src="./public/Icon/menuBlack.png" alt="menu" />
-          <div class="sideMenuAll">
-            <div>
-              <ul>
-                <li>
-                  About
-                  <ul class="sideMainMenu">
-                    <li><a href="#">회사소개</a></li>
-                    <li><a href="#">연혁</a></li>
-                    <li><a href="#">조직도</a></li>
-                  </ul>
-                </li>
-
-                <li>
-                  Development
-                  <ul class="sideMainMenu">
-                    <li><a href="#">AI 비전검사 </a></li>
-                    <li><a href="#">AI 공정인식 시스템 </a></li>
-                    <li><a href="#">AI 산업안전 솔루션 </a></li>
-                    <li><a href="#">AI 화재감지 </a></li>
-                    <li><a href="#">PTLS </a></li>
-                    <li><a href="#">Digital Twin</a></li>
-                  </ul>
-                </li>
-
-                <li>
-                  PR Center
-                  <ul class="sideMainMenu">
-                    <li><a href="">공지사항</a></li>
-                    <li><a href="">보도자료</a></li>
-                  </ul>
-                </li>
-
-                <li>
-                  Contact
-                  <ul class="sideMainMenu">
-                    <li><a href="">문의하기</a></li>
-                    <li><a href="">오시는 길</a></li>
-                  </ul>
-                </li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </div>
-    </header>
+    <!-- header -->
+    <div id="header"></div>
 
     <section class="section01">
       <div class="banner">
-        <div class="slider-container">
-          <div class="slider">
-            <img src="./public/Images/test.png" alt="이미지 설명" />
-          </div>
-        </div>
+        <div class="slider-container"></div>
         <div class="bannerText">
-          <h2>Welcome to THE COMPANY</h2>
-          <span class="textLine"></span>
+          <h2>Opening the Future with AI Industry</h2>
           <p>
-            Hybrid Solution 기술로 맞춤형 솔루션을 제공하는 A.I Platform 기업
+            더컴퍼니는 혁신적인 AI 인공지능 산업의 기술로 새로운 미래를
+            열어갑니다.
           </p>
+          <div class="bannerMenu">
+            <ul>
+              <li><a href="./src/Pages/about.html">회사소개</a></li>
+              <li><a href="./src/Pages/business.html">사업분야</a></li>
+              <li><a href="./src/Pages/support.html">고객센터</a></li>
+            </ul>
+          </div>
         </div>
       </div>
     </section>
 
-    <section>
-      <div>
-        <!-- <img src="./public/Images/Main/sectionBg.jpg" alt="background" /> -->
-        <div>
-          <p>ALL THING ABOUT INNOVATION</p>
-          <h3>
+    <section class="containerBox">
+      <div class="introduce">
+        <img src="./public/Images/Main/sectionBg.jpg" alt="background" />
+        <div class="intTxt">
+          <em>ALL THING ABOUT INNOVATION</em>
+          <p>
             더컴퍼니는 소프트웨어에 최적화된 하드웨어 제작을 통해 효율적인
             서비스를 제공하고자 국내 10년 이상의 경력을 보유한 전문 인력들과
             함께 최선을 다하고 있습니다.
-          </h3>
+          </p>
         </div>
-        <div>
-          <div>
+        <div class="intIcon">
+          <div class="intIcon01">
             <img src="./public/Icon/section2Icon01.png" alt="icon" />
-            <em>창의</em>
+            <h3>창의</h3>
             <p>창의적 신기술 선도</p>
           </div>
-          <div>
+          <div class="intIcon02">
             <img src="./public/Icon/section2Icon02.png" alt="icon" />
-            <em>도전</em>
+            <h3>도전</h3>
             <p>도전적인 정신</p>
           </div>
-          <div>
+          <div class="intIcon03">
             <img src="./public/Icon/section2Icon03.png" alt="icon" />
-            <em>새로움</em>
+            <h3>새로움</h3>
             <p>새로운 기업 가치 창조</p>
           </div>
-          <div>
+          <div class="intIcon04">
             <img src="./public/Icon/section2Icon04.png" alt="icon" />
-            <em>소통</em>
+            <h3>소통</h3>
             <p>화합의 시작 소통</p>
           </div>
         </div>
       </div>
     </section>
+    <section class="containerBox">
+      <div class="inquiry mainTxt">
+        <p>INQUIRY</p>
+        <h2>문의하기</h2>
+        <img src="./public/Icon/wave.png" alt="Icon" />
+        <div class="emailForm">
+          <form id="contact-form">
+            <input type="hidden" name="contact_number" />
+            <div class="inputRow">
+              <div class="inputHalf">
+                <label for="name">성함</label>
+                <input
+                  type="text"
+                  id="name"
+                  name="name"
+                  placeholder="고객명 or 고객사명을 입력해 주세요."
+                  required
+                />
+              </div>
+              <div class="inputHalf">
+                <label for="contact">연락처</label>
+                <input
+                  type="text"
+                  id="contact"
+                  name="contact"
+                  placeholder="연락처를 입력해 주세요."
+                  required
+                />
+              </div>
+            </div>
+            <div>
+              <label for="email">이메일</label>
+              <input
+                type="email"
+                id="email"
+                name="email"
+                placeholder="이메일을 입력해 주세요."
+                required
+              />
+            </div>
+            <div>
+              <label for="message">내용</label>
+              <textarea
+                id="message"
+                name="message"
+                rows="8"
+                placeholder="문의 내용을 입력해 주세요."
+                required
+              ></textarea>
+            </div>
+            <input type="submit" value="문의하기" />
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <!-- footer -->
+    <div id="footer"></div>
+
+    <!-- 공통영역 js -->
+    <script src="./src/Script/common.js"></script>
+    <script src="./src/Script/animation.js"></script>
   </body>
 </html>

@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../../index.css" />
+    <link rel="stylesheet" href="../Style/header.css" />
+    <link rel="stylesheet" href="../Style/footer.css" />
+    <link rel="stylesheet" href="../Style/common.css" />
+    <link rel="stylesheet" href="../Style/form.css" />
+    <link rel="stylesheet" href="./support.css" />
+
+    <link
+      href="https://webfontworld.github.io/NanumSquareNeo/NanumSquareNeo.css"
+      rel="stylesheet"
+    />
+
+    <script
+      src="https://kit.fontawesome.com/cad96521f3.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="../Script/header.js"></script>
+
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"
+    ></script>
+    <script type="text/javascript">
+      (function () {
+        emailjs.init("AjCgEbZ-L6jYzN1Xw");
+      })();
+    </script>
+    <script type="text/javascript">
+      window.onload = function () {
+        document
+          .getElementById("contact-form")
+          .addEventListener("submit", function (event) {
+            event.preventDefault();
+            this.contact_number.value = (Math.random() * 100000) | 0;
+            emailjs.sendForm("service_dqv0xx8", "template_305z298", this).then(
+              function () {
+                console.log("SUCCESS!");
+                alert("메일 발송에 성공했습니다.");
+              },
+              function (error) {
+                console.log("FAILED...", error);
+                alert("메일 발송에 실패했습니다.");
+              }
+            );
+          });
+      };
+    </script>
+
+    <title>THE COMPANY</title>
+  </head>
+  <body>
+    <!-- header -->
+    <div id="header"></div>
+
+    <section class="containerBox">
+      <div class="aiVision mainTxt">
+        <p>INQUIRY</p>
+        <h2>문의하기</h2>
+        <img src="../../public/Icon/wave.png" alt="Icon" />
+        <h3>더컴퍼니는 고객사와 함께 고뇌하여 최적의 결과물을 창출합니다.</h3>
+      </div>
+      <div class="emailForm">
+        <form id="contact-form">
+          <input type="hidden" name="contact_number" />
+          <div class="inputRow">
+            <div class="inputHalf">
+              <label for="name">성함</label>
+              <input
+                type="text"
+                id="name"
+                name="name"
+                placeholder="고객명 or 고객사명을 입력해 주세요."
+                required
+              />
+            </div>
+            <div class="inputHalf">
+              <label for="contact">연락처</label>
+              <input
+                type="text"
+                id="contact"
+                name="contact"
+                placeholder="연락처를 입력해 주세요."
+                required
+              />
+            </div>
+          </div>
+          <div>
+            <label for="email">이메일</label>
+            <input
+              type="email"
+              id="email"
+              name="email"
+              placeholder="이메일을 입력해 주세요."
+              required
+            />
+          </div>
+          <div>
+            <label for="message">내용</label>
+            <textarea
+              id="message"
+              name="message"
+              rows="12"
+              placeholder="문의 내용을 입력해 주세요."
+              required
+            ></textarea>
+          </div>
+          <input type="submit" value="문의하기" />
+        </form>
+      </div>
+
+      <div
+        id="daumRoughmapContainer1692665468323"
+        class="root_daum_roughmap root_daum_roughmap_landing map"
+      ></div>
+      <div>
+        <div class="location">
+          <div class="locationIcon">
+            <img src="../../public/Icon/location.png" alt="Location" />
+            <span>Location</span>
+          </div>
+          <div class="locationInfo">
+            <span><em>// </em>주소</span>
+            <p>경남 창원시 마산회원구 봉암북7길 21, 6동 303호</p>
+          </div>
+          <div class="locationInfo">
+            <span><em>// </em>이메일</span>
+            <p>one@bestco.kr</p>
+          </div>
+          <div class="locationInfo">
+            <span><em>// </em>전화번호</span>
+            <p>1688-9841 / 055-609-1909</p>
+          </div>
+        </div>
+      </div>
+
+      <script
+        charset="UTF-8"
+        class="daum_roughmap_loader_script"
+        src="https://ssl.daumcdn.net/dmaps/map_js_init/roughmapLoader.js"
+      ></script>
+
+      <script charset="UTF-8">
+        new daum.roughmap.Lander({
+          timestamp: "1692665468323",
+          key: "2fwq5",
+          mapWidth: "1200",
+          mapHeight: "360",
+        }).render();
+      </script>
+    </section>
+
+    <!-- footer -->
+    <div id="footer"></div>
+
+    <!-- 공통영역 js -->
+    <script src="../Script/common.js"></script>
+  </body>
+</html>

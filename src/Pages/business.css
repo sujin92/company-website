@@ -1,0 +1,679 @@
+.aiVision {
+  margin-top: 180px;
+}
+
+.visionSolution {
+  position: relative;
+  width: 1024px;
+  height: auto;
+  box-shadow: 2px 2px 10px rgba(83, 83, 83, 0.2);
+  display: flex;
+  justify-content: center;
+}
+
+.solution {
+  margin-top: 100px;
+  animation: slideInFromBottom 1s ease-out;
+}
+@keyframes slideInFromBottom {
+  0% {
+    transform: translateY(70%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.solution > h3 {
+  width: 300px;
+  height: 50px;
+  font-size: 22px;
+  color: #ffffff;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  background-image: linear-gradient(to right, #8ccdbd, #3e9dcf);
+  position: absolute;
+  top: -25px;
+}
+
+.solutionBox {
+  margin-top: 40px;
+}
+
+.solutionBox > p {
+  text-align: left;
+  font-size: 18px;
+  font-weight: 600;
+  margin: 60px 0 40px;
+  position: relative;
+}
+
+.solutionBox > p::after {
+  content: "";
+  display: block;
+  width: 80%;
+  height: 1px;
+  background: repeating-linear-gradient(
+    to right,
+    transparent,
+    transparent 4px,
+    #d3d3d3 10px,
+    #d3d3d3 8px
+  );
+  position: absolute;
+  bottom: 50%;
+  right: 0;
+}
+
+.solutionBox > .solutionInner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.solutionBox > .solutionInner div {
+  width: 175px;
+}
+
+.solutionBox > .solutionInner > img {
+  height: 95px;
+}
+
+.solutionBox > .solutionInner div h4 {
+  font-size: 16px;
+  font-weight: 600;
+  margin: 30px 0 20px;
+}
+
+.solutionBox > .solutionInner div p {
+  font-size: 14px;
+  color: #7c7c7c;
+  width: 180px;
+  word-break: keep-all;
+  margin: 0 auto;
+  line-height: 20px;
+}
+
+.innerMargin {
+  margin-bottom: 100px;
+}
+
+.visionCharacter {
+  position: relative;
+  width: 100vw;
+  margin-left: calc(-50vw + 50%);
+  background-color: #f7f7f7;
+  height: auto;
+  display: flex;
+  justify-content: center;
+}
+
+.characterInner {
+  width: 1024px;
+  text-align: left;
+}
+
+.characterInner > div {
+  position: relative;
+}
+
+.characterInner span {
+  position: absolute;
+  font-size: 47px;
+  font-weight: 900;
+  color: #e8e8e8;
+}
+
+.characterInner h4 {
+  font-size: 18px;
+  margin: 80px 0 20px 100px;
+  font-weight: 600;
+}
+
+.characterInner p {
+  font-size: 16px;
+  margin-left: 100px;
+  line-height: 24px;
+  word-break: keep-all;
+}
+
+.characterInner div::after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 1px;
+  background-color: #a3d1d6;
+  position: absolute;
+  bottom: -40%;
+}
+
+.characterInner div:nth-of-type(5)::after {
+  display: none;
+}
+
+.characterInner div:nth-of-type(5) p {
+  margin-bottom: 80px;
+}
+
+.videoBox {
+  width: 100%;
+  margin-top: 40px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.videoBox div {
+  word-break: keep-all;
+  margin: 60px 30px 100px;
+  text-align: left;
+  width: 360px;
+}
+
+.videoBox div > h4 {
+  font-size: 18px;
+  line-height: 30px;
+  margin: 30px 0 20px;
+  color: #327787;
+  font-weight: 600;
+}
+
+.videoBox div > p {
+  font-size: 16px;
+  line-height: 24px;
+  color: #7c7c7c;
+}
+
+.situation {
+  width: 1024px;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.situation div {
+  word-break: keep-all;
+  width: 250px;
+  margin: 50px 0;
+}
+
+.situation div img {
+  width: 180px;
+}
+
+.situation div h4 {
+  display: inline-block;
+  font-size: 18px;
+  font-weight: 600;
+  margin: 30px 0 20px;
+  background: linear-gradient(to top, #91e0e8 60%, transparent 50%);
+}
+
+.situation div p {
+  font-size: 16px;
+  color: #7c7c7c;
+  line-height: 24px;
+}
+
+.solution .chartWeb {
+  margin: 80px 0;
+}
+
+.chartMobile {
+  display: none;
+}
+
+.solution .fire {
+  width: 100vw;
+  margin-left: calc(-50vw + 50%);
+}
+
+.fireMobile {
+  display: none;
+}
+
+.process {
+  margin: 80px 0 140px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.process div {
+  width: 160px;
+  margin: 0 30px;
+}
+
+.process div h4 {
+  font-size: 18px;
+  font-weight: 600;
+  margin: 30px 0 20px;
+}
+
+.process div p {
+  font-size: 16px;
+  color: #7c7c7c;
+  word-break: keep-all;
+  line-height: 24px;
+}
+
+.arrow02 {
+  height: 24px;
+}
+
+.arrow03 {
+  position: absolute;
+  display: flex;
+  bottom: 60px;
+  align-items: flex-end;
+  left: 11%;
+}
+
+.arrow03 > img {
+  margin-bottom: 13px;
+}
+
+.arrow03 > p {
+  height: 30px;
+  background-color: #a3d1d6;
+  border-radius: 50px;
+  font-size: 16px;
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  padding: 0 60px;
+}
+
+@media (max-width: 1024px) {
+  .visionSolution {
+    width: 961px;
+  }
+  .solutionBox > .solutionInner div {
+    width: 165px;
+  }
+
+  .characterInner {
+    width: 961px;
+  }
+  .characterInner h4 {
+    font-size: 17px;
+  }
+  .characterInner p {
+    font-size: 15px;
+  }
+
+  .situation {
+    width: 961px;
+  }
+  .situation div {
+    width: 220px;
+  }
+  .situation div img {
+    width: 170px;
+  }
+
+  .process {
+    margin: 80px 0 140px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .arrow03 {
+    left: 8.6%;
+  }
+}
+
+@media (max-width: 960px) {
+  .aiVision {
+    margin-top: 130px;
+  }
+
+  .visionSolution {
+    width: 581px;
+  }
+  .solution > h3 {
+    width: 250px;
+    height: 45px;
+    font-size: 18px;
+  }
+  .solutionBox > p {
+    margin: 50px 0 40px;
+    padding: 0 20px;
+  }
+  .solutionBox > p::after {
+    width: 62%;
+    right: 20px;
+  }
+  .innerMargin {
+    margin-bottom: 70px;
+  }
+  .solutionBox > .solutionInner {
+    justify-content: center;
+  }
+  .solutionBox > .solutionInner div {
+    width: 130px;
+    margin: 0 20px;
+  }
+  .solutionBox > .solutionInner div:nth-of-type(1),
+  .solutionBox > .solutionInner div:nth-of-type(2),
+  .solutionBox > .solutionInner div:nth-of-type(3) {
+    margin-bottom: 50px;
+  }
+  .solutionBox > .solutionInner div p {
+    font-size: 14px;
+    width: 130px;
+    line-height: 20px;
+  }
+
+  .characterInner {
+    width: 581px;
+  }
+  .characterInner div::after {
+    bottom: -23%;
+  }
+  .characterInner > div h4 {
+    line-height: 28px;
+  }
+  .characterInner div:nth-of-type(5) p {
+    margin-bottom: 60px;
+  }
+
+  .videoBox {
+    width: 100%;
+    margin-top: 40px;
+    display: block;
+  }
+  .videoBox div {
+    width: 500px;
+    margin: 50px auto;
+  }
+  .videoBox div > h4 {
+    margin: 20px 0 10px;
+  }
+
+  .situation {
+    width: 581px;
+  }
+  .situation div {
+    width: 250px;
+    margin: 50px 0 0;
+  }
+  .situation div:nth-of-type(3),
+  .situation div:nth-of-type(4) {
+    margin-bottom: 50px;
+  }
+  .situation div img {
+    width: 190px;
+  }
+
+  .chartWeb {
+    margin: 70px 0 50px;
+    width: 550px;
+  }
+
+  .solutionFire {
+    margin-top: 80px !important;
+  }
+
+  .process {
+    margin: 40px 0 70px;
+  }
+  .process div {
+    width: 190px;
+    margin: 40px 20px 0;
+  }
+  .process div h4 {
+    font-size: 18px;
+    font-weight: 600;
+    margin: 30px 0 20px;
+  }
+  .process div p {
+    font-size: 16px;
+    color: #7c7c7c;
+    word-break: keep-all;
+    line-height: 24px;
+  }
+  .arrowHidden,
+  .arrow03 {
+    display: none;
+  }
+}
+
+@media (max-width: 580px) {
+  .solution {
+    margin-top: 80px;
+  }
+  .visionSolution {
+    width: 376px;
+  }
+  .solutionBox > p::after {
+    width: 42%;
+  }
+  .solutionBox > .solutionInner div p {
+    font-size: 14px;
+    width: 130px;
+    line-height: 20px;
+  }
+
+  .characterInner {
+    width: 376px;
+  }
+  .characterInner div::after {
+    bottom: -14%;
+  }
+  .characterInner > div h4 {
+    line-height: 24px;
+    font-size: 16px;
+    margin: 60px 0 10px 80px;
+    word-break: keep-all;
+  }
+  .characterInner div p {
+    font-size: 14px;
+    line-height: 22px;
+    margin-left: 80px;
+  }
+  .characterInner span {
+    font-size: 40px;
+  }
+
+  .videoBox div {
+    width: 330px;
+  }
+  .videoBox div > h4 {
+    font-size: 16px;
+    line-height: 24px;
+  }
+  .videoBox div > p {
+    font-size: 14px;
+    line-height: 24px;
+  }
+
+  .visionCharacter {
+    margin-top: 80px;
+  }
+  .situation {
+    width: 376px;
+  }
+  .situation div {
+    width: 170px;
+  }
+  .situation div img {
+    width: 160px;
+  }
+  .situation div h4 {
+    font-size: 16px;
+  }
+  .situation div p {
+    font-size: 14px;
+    line-height: 22px;
+  }
+
+  .chartWeb {
+    display: none;
+  }
+  .chartMobile {
+    display: block;
+    width: 360px;
+    margin: 60px 0 40px;
+  }
+
+  .fireMobile {
+    display: block;
+  }
+  .fireWeb {
+    display: none;
+  }
+
+  .process {
+    margin: 40px 0 70px;
+  }
+  .process div {
+    width: 140px;
+    margin: 40px 10px 0;
+  }
+  .process div img {
+    width: 60px;
+  }
+  .process div h4 {
+    font-size: 16px;
+    margin: 20px 0 10px;
+  }
+  .process div p {
+    font-size: 14px;
+    line-height: 22px;
+  }
+  .arrow02 {
+    height: 20px;
+  }
+}
+
+@media (max-width: 375px) {
+  .solution {
+    margin-top: 70px;
+  }
+  .visionSolution {
+    width: 280px;
+  }
+  .solution > h3 {
+    width: 200px;
+    height: 38px;
+    font-size: 15px;
+  }
+  .solutionBox {
+    margin-top: 20px;
+  }
+  .solutionBox > p {
+    font-size: 15px;
+  }
+  .solutionBox > p::after {
+    width: 33%;
+  }
+  .solutionBox > .solutionInner div {
+    width: 100px;
+    margin: 0 13px;
+  }
+  .solutionBox > .solutionInner div img {
+    width: 45px;
+  }
+  .solutionBox > .solutionInner div h4 {
+    font-size: 14px;
+    margin: 20px 0 10px;
+  }
+  .solutionBox > .solutionInner div p {
+    font-size: 12px;
+    width: 100px;
+    line-height: 18px;
+  }
+  .innerMargin {
+    margin-bottom: 50px;
+  }
+
+  .characterInner {
+    width: 280px;
+  }
+  .characterInner div::after {
+    bottom: -13%;
+  }
+  .characterInner > div h4 {
+    line-height: 20px;
+    font-size: 13px;
+    margin: 50px 0 10px 60px;
+    word-break: keep-all;
+  }
+  .characterInner div p {
+    font-size: 12px;
+    line-height: 18px;
+    margin-left: 60px;
+  }
+  .characterInner span {
+    font-size: 32px;
+  }
+  .characterInner div:nth-of-type(5) p {
+    margin-bottom: 40px;
+  }
+
+  .videoBox {
+    margin-top: 20px;
+  }
+  .videoBox div {
+    width: 240px;
+    margin: 30px auto;
+  }
+  .videoBox div img {
+    width: 60px;
+  }
+  .videoBox div > h4 {
+    font-size: 14px;
+    line-height: 22px;
+  }
+  .videoBox div > p {
+    font-size: 12px;
+    line-height: 18px;
+  }
+
+  .situation {
+    width: 280px;
+  }
+  .situation div {
+    width: 130px;
+  }
+  .situation div img {
+    width: 130px;
+  }
+  .situation div h4 {
+    font-size: 14px;
+  }
+  .situation div p {
+    font-size: 12px;
+    line-height: 18px;
+  }
+
+  .chartMobile {
+    width: 260px;
+    margin: 40px 0 30px;
+  }
+
+  .solutionFire {
+    margin-top: 50px !important;
+  }
+
+  .process {
+    margin: 10px 0 40px;
+  }
+  .process div {
+    width: 110px;
+    margin: 40px 5px 0;
+  }
+  .process div h4 {
+    font-size: 14px;
+  }
+  .process div p {
+    font-size: 12px;
+    line-height: 18px;
+  }
+}

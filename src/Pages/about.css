@@ -1,0 +1,209 @@
+.vision {
+  margin-top: 180px;
+}
+
+.visionIntro {
+  width: 1000px;
+  display: flex;
+  justify-content: space-between;
+  margin: 0 auto;
+  animation: slideInFromBottom 1s ease-out;
+}
+@keyframes slideInFromBottom {
+  0% {
+    transform: translateY(70%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.visionIntro div {
+  width: 33.3%;
+}
+
+.visionIntro h4 {
+  font-size: 20px;
+  font-weight: 600;
+  margin: 30px 0 20px;
+}
+
+.visionIntro p {
+  font-size: 16px;
+  line-height: 24px;
+  color: #7c7c7c;
+}
+
+.visionImg {
+  position: relative;
+  height: 330px;
+  margin-top: 80px;
+  display: flex;
+  align-items: center;
+}
+
+.visionImg .visionImgBg {
+  width: 100vw;
+  margin-left: calc(-50vw + 50%);
+  height: 330px;
+  position: absolute;
+  left: 0;
+  z-index: -1;
+  background-image: url(../../public/Images/visioinBg.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
+  background-size: cover;
+}
+
+.visionImg > p,
+.visionImg > p em {
+  color: #ffffff;
+  font-size: 20px;
+  word-break: keep-all;
+  width: 900px;
+  margin: 0 auto;
+  line-height: 46px;
+}
+
+.visionLogo img {
+  margin: 20px auto;
+  width: 1000px;
+}
+
+.visionLogo .plusLogo {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  font-size: 30px;
+  color: #327787;
+  font-weight: 600;
+  border-radius: 50%;
+  background-color: #ffffff;
+  box-shadow: 2px 2px 10px rgba(5, 61, 134, 0.2);
+  cursor: pointer;
+  margin-top: 20px;
+}
+
+.logoHidden {
+  display: none;
+}
+
+@media (max-width: 1024px) {
+  .visionIntro {
+    width: 961px;
+  }
+  .visionIntro h4 {
+    font-size: 18px;
+  }
+  .visionIntro p {
+    word-break: keep-all;
+    font-size: 16px;
+    margin: 0 20px;
+  }
+
+  .visionLogo img {
+    width: 950px;
+  }
+}
+
+@media (max-width: 960px) {
+  .vision {
+    margin-top: 130px;
+  }
+  .visionIntro {
+    width: 581px;
+  }
+  .visionImg {
+    height: 300px;
+  }
+  .visionImg .visionImgBg {
+    height: 300px;
+  }
+  .visionImg > p,
+  .visionImg > p em {
+    font-size: 16px;
+    width: 560px;
+  }
+
+  .visionLogo img {
+    width: 581px;
+  }
+}
+
+@media (max-width: 580px) {
+  .visionIntro {
+    width: 376px;
+  }
+  .visionIntro div img {
+    width: 60px;
+  }
+  .visionIntro h4 {
+    font-size: 14px;
+    margin: 20px 0 10px;
+  }
+  .visionIntro p {
+    font-size: 12px;
+    margin: 0 5px;
+    line-height: 20px;
+  }
+
+  .visionImg {
+    height: 250px;
+    margin-top: 60px;
+  }
+  .visionImg .visionImgBg {
+    height: 250px;
+  }
+  .visionImg > p,
+  .visionImg > p em {
+    font-size: 13px;
+    width: 376px;
+    line-height: 27px;
+  }
+
+  .visionLogo img {
+    width: 376px;
+  }
+  .visionLogo .plusLogo {
+    width: 30px;
+    height: 30px;
+    font-size: 26px;
+  }
+}
+
+@media (max-width: 375px) {
+  .visionIntro {
+    width: 280px;
+    display: block;
+  }
+  .visionIntro div {
+    width: 100%;
+    flex-wrap: wrap;
+    margin-bottom: 30px;
+  }
+
+  .visionImg {
+    height: 180px;
+    margin-top: 60px;
+  }
+  .visionImg .visionImgBg {
+    height: 180px;
+  }
+  .visionImg > p em {
+    display: none;
+  }
+
+  .visionLogo img {
+    width: 280px;
+  }
+  .visionLogo .plusLogo {
+    width: 25px;
+    height: 25px;
+    font-size: 20px;
+  }
+}

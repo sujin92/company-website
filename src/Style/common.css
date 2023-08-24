@@ -1,0 +1,107 @@
+.containerBox {
+  text-align: center;
+}
+
+/* 소제목 텍스트 */
+.mainTxt {
+  text-align: center;
+  margin-top: 80px;
+  animation: slideInFromBottom 1s ease-out;
+}
+@keyframes slideInFromBottom {
+  0% {
+    transform: translateY(70%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.mainTxt > p {
+  font-size: 48px;
+  font-weight: 900;
+  color: #f7f7f7;
+}
+
+.mainTxt > h2 {
+  font-size: 36px;
+  margin-top: -30px;
+  font-weight: 600;
+}
+
+.mainTxt > h3 {
+  font-size: 18px;
+  word-break: keep-all;
+  width: 600px;
+  margin: 0 auto 80px;
+  line-height: 32px;
+}
+
+.mainTxt > h3 > em {
+  font-weight: 600;
+}
+
+.mainTxt > img {
+  margin: 40px 0;
+}
+
+@media (max-width: 1024px) {
+}
+
+@media (max-width: 960px) {
+  .mainTxt > p {
+    font-size: 40px;
+  }
+  .mainTxt > h2 {
+    font-size: 32px;
+    margin-top: -20px;
+  }
+  .mainTxt > h3 {
+    width: 581px;
+  }
+}
+
+@media (max-width: 580px) {
+  .mainTxt {
+    margin-top: 60px;
+  }
+  .mainTxt > p {
+    font-size: 36px;
+  }
+  .mainTxt > h2 {
+    font-size: 26px;
+    margin-top: -15px;
+  }
+  .mainTxt > img {
+    margin: 30px 0;
+    width: 70px;
+  }
+  .mainTxt > h3 {
+    font-size: 16px;
+    width: 376px;
+    margin: 0 auto 60px;
+    line-height: 24px;
+  }
+}
+
+@media (max-width: 375px) {
+  .mainTxt > p {
+    font-size: 26px;
+  }
+  .mainTxt > h2 {
+    font-size: 22px;
+    margin-top: -15px;
+  }
+  .mainTxt > img {
+    margin: 20px 0;
+    width: 50px;
+  }
+  .mainTxt > h3 {
+    font-size: 13px;
+    width: 280px;
+    margin: 0 auto 40px;
+    line-height: 20px;
+  }
+}

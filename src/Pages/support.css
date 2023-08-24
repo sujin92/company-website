@@ -1,0 +1,148 @@
+.aiVision {
+  margin-top: 180px;
+}
+
+.emailForm {
+  margin-bottom: 80px;
+  animation: slideInFromBottom 1s ease-out;
+}
+@keyframes slideInFromBottom {
+  0% {
+    transform: translateY(70%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.map {
+  box-shadow: 3px 3px 8px rgba(124, 124, 124, 0.2);
+  width: 1000px !important;
+}
+
+.root_daum_roughmap .border1,
+.root_daum_roughmap .border3,
+.root_daum_roughmap .border4 {
+  display: none;
+}
+.root_daum_roughmap .wrap_controllers {
+  display: none;
+}
+.location {
+  display: flex;
+  justify-content: left;
+  margin-top: 20px;
+  align-items: center;
+}
+
+.location div {
+  margin-right: 50px;
+}
+
+.locationIcon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 200px;
+  height: 60px;
+  background-image: linear-gradient(to right, #8ccdbd, #3e9dcf);
+}
+
+.locationIcon span {
+  font-size: 18px;
+  color: #ffffff;
+  margin-left: 10px;
+}
+
+.locationIcon img,
+.locationIcon span {
+  display: block;
+}
+
+.locationIcon img {
+  max-height: 100%;
+  max-width: 100%;
+}
+
+.locationInfo {
+  text-align: left;
+}
+
+.locationInfo span {
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.locationInfo span em {
+  font-weight: 900;
+  color: #41bace;
+}
+
+.locationInfo p {
+  margin-top: 10px;
+  font-size: 14px;
+}
+
+@media (max-width: 1024px) {
+  .map {
+    width: 961px !important;
+  }
+  .location div {
+    margin-right: 30px;
+  }
+}
+
+@media (max-width: 960px) {
+  .aiVision {
+    margin-top: 130px;
+  }
+  .map {
+    position: absolute;
+    width: 581px !important;
+  }
+  .location {
+    width: 581px;
+    display: block;
+  }
+  .location div {
+    width: 100%;
+    margin: 20px auto 30px;
+    text-align: center;
+  }
+  .locationIcon {
+    width: 581px !important;
+    height: 40px;
+  }
+}
+
+@media (max-width: 580px) {
+  .map {
+    width: 376px !important;
+  }
+  .location {
+    width: 376px;
+  }
+  .locationIcon {
+    width: 376px !important;
+  }
+}
+
+@media (max-width: 375px) {
+  .map {
+    width: 280px !important;
+  }
+  .location {
+    width: 280px;
+  }
+  .locationIcon {
+    width: 280px !important;
+  }
+  .locationInfo span {
+    font-size: 14px;
+  }
+  .locationInfo p {
+    font-size: 12px;
+  }
+}
